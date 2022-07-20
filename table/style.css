@@ -1,0 +1,73 @@
+.kol-react-table-host * {
+	hyphens: var(--kolibri-hyphens);
+	font-family: var(--kolibri-font-family);
+	line-height: var(--kolibri-line-height);
+	word-break: break-word;
+}
+.kol-react-table-host > div {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+caption {
+	padding: 0.5em;
+}
+th {
+	font-weight: normal;
+	color: var(--color-midnight);
+}
+.kol-react-table-host table thead tr:first-child th,
+.kol-react-table-host table thead tr:first-child td {
+	border-width: 0;
+	border-top-width: 2px;
+	border-style: solid;
+	border-color: var(--color-ice);
+}
+table {
+	width: 100%;
+	border-spacing: 0;
+}
+table,
+.kol-react-table-host table thead tr:last-child th,
+.kol-react-table-host table thead tr:last-child td {
+	border-width: 0;
+	border-bottom-width: 2px;
+	border-style: solid;
+	border-color: var(--color-ice);
+}
+th {
+	background-color: var(--color-white);
+}
+th div {
+	width: 100%;
+	display: flex;
+	gap: 0.5em;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+}
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+th,
+td {
+	padding: 0.5em;
+}
+th[aria-sort='ascending'],
+th[aria-sort='descending'] {
+	font-weight: 700;
+}
+.kol-react-table-host > div.pagination {
+	padding: 0.5em;
+}
+.kol-react-table-host > div:last-child,
+.kol-react-table-host > div.pagination > div:last-child {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	gap: 1em;
+}
+@media (min-width: 1024px) {
+	.kol-react-table-host > div:last-child,
+	.kol-react-table-host > div.pagination > div:last-child {
+		grid-auto-flow: column;
+	}
+}
